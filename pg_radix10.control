@@ -1,0 +1,6 @@
+# pg_radix10 extension
+comment = 'Radix-10^9 numeric type — 15-23% smaller than NUMERIC'
+default_version = '1.0'
+module_pathname = '$libdir/pg_radix10'
+relocatable = true
+superuser = false

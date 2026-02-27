@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyradix10"
+version = "0.1.0"
+description = "Radix-10^9 numeric library — companion to the pg_radix10 PostgreSQL extension"
+readme = "README.md"
+license = {text = "PostgreSQL License"}
+requires-python = ">=3.9"
+authors = [
+    {name = "pg_radix10 Contributors"}
+]
+keywords = ["decimal", "radix10", "radix-10", "postgresql", "numeric", "storage", "density"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Database",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "psycopg[binary]>=3.1",
+    "pandas>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+]
+benchmark = [
+    "tabulate>=0.9",
+    "tqdm>=4.65",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pyradix10*"]
